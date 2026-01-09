@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&I Roofing Pro - Professional Roofing Services</title>
+    <meta name="description" content="S&I Roofing Pro - Professional roofing installation, repair, and inspection services. Licensed & insured. Free estimates!">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.6rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo span {
+            color: #f59e0b;
+        }
+        
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            color: #f59e0b;
+        }
+        
+        .admin-btn {
+            background: #f59e0b;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        
+        .phone-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(26, 71, 42, 0.85), rgba(26, 71, 42, 0.85)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%232d5a3d" width="1200" height="600"/><path fill="%231a472a" d="M0 400L50 380C100 360 200 320 300 300C400 280 500 280 600 300C700 320 800 360 900 380C1000 400 1100 400 1150 400L1200 400V600H0V400Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            background: rgba(255,255,255,0.95);
+            color: #1a472a;
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #f59e0b;
+            color: white;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+            cursor: pointer;
+            border: none;
+            font-size: 1.1rem;
+            margin: 0.5rem;
+        }
+        
+        .cta-button:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.6);
+        }
+        
+        .cta-button.secondary {
+            background: white;
+            color: #1a472a;
+        }
+        
+        .cta-button.secondary:hover {
+            background: #f3f4f6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .trust-section {
+            background: #f9fafb;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 2rem auto 0;
+        }
+        
+        .trust-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .trust-item .icon {
+            font-size: 3rem;
+        }
+        
+        .trust-item h3 {
+            color: #1a472a;
+            font-size: 1.2rem;
+        }
+        
+        .services {
+            background: white;
+        }
+        
+        .services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1a472a;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: #f9fafb;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+        
+        .service-card h3 {
+            color: #1a472a;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonials {
+            background: #1a472a;
+            color: white;
+            padding: 4rem 2rem;
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #f59e0b;
+        }
+        
+        .stars {
+            color: #f59e0b;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .about {
+            background: #f9fafb;
+        }
+        
+        .about h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #1a472a;
+        }
+        
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .team-member {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .team-member h3 {
+            color: #1a472a;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .warranty-section {
+            background: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .warranty-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+        }
+        
+        .warranty-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact {
+            background: linear-gradient(135deg, #2d5a3d 0%, #1a472a 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            font-size: 1.1rem;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 3rem auto 0;
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 12px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 8px;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.95);
+            color: #333;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-top: 0.25rem;
+        }
+        
+        .checkbox-group label {
+            font-weight: normal;
+            font-size: 0.9rem;
+        }
+        
+        .checkbox-group a {
+            color: #f59e0b;
+            text-decoration: underline;
+        }
+        
+        footer {
+            background: #0f2419;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        footer a {
+            color: #f59e0b;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            overflow-y: auto;
+        }
+        
+        .modal-content {
+            background: white;
+            margin: 2rem auto;
+            padding: 3rem;
+            max-width: 800px;
+            border-radius: 12px;
+            position: relative;
+            color: #333;
+        }
+        
+        .modal-content h2 {
+            color: #1a472a;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-content h3 {
+            color: #1a472a;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .modal-content p {
+            margin-bottom: 1rem;
+        }
+        
+        .modal-content ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .close {
+            color: #666;
+            float: right;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 1;
+        }
+        
+        .close:hover {
+            color: #1a472a;
+        }
+        
+        .success-message {
+            display: none;
+            background: #10b981;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            text-align: center;
+        }
+        
+        .error-message {
+            color: #fbbf24;
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+        
+        .emergency-banner {
+            background: #dc2626;
+            color: white;
+            padding: 0.75rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .emergency-banner a {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        /* Admin Panel Styles */
+        .admin-container {
+            display: none;
+            min-height: 100vh;
+            background: #f3f4f6;
+        }
+        
+        .admin-header {
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
+            color: white;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .admin-header h1 {
+            font-size: 1.8rem;
+        }
+        
+        .logout-btn {
+            background: #dc2626;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .logout-btn:hover {
+            background: #b91c1c;
+        }
+        
+        .admin-nav {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+        }
+        
+        .admin-nav-btn {
+            background: none;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #666;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+        
+        .admin-nav-btn.active {
+            color: #1a472a;
+            border-bottom-color: #f59e0b;
+        }
+        
+        .admin-nav-btn:hover {
+            color: #1a472a;
+        }
+        
+        .admin-content {
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .admin-section {
+            display: none;
+        }
+        
+        .admin-section.active {
+            display: block;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .stat-card h3 {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-card .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1a472a;
+        }
+        
+        .stat-card .stat-change {
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        
+        .stat-change.positive {
+            color: #10b981;
+        }
+        
+        .stat-change.negative {
+            color: #dc2626;
+        }
+        
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .card h2 {
+            color: #1a472a;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow-x: auto;
+        }
+        
+        .data-table th {
+            background: #f3f4f6;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            color: #1a472a;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        .data-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .data-table tr:hover {
+            background: #f9fafb;
+        }
+        
+        .status-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .status-pending {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        
+        .status-confirmed {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        
+        .status-completed {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .status-paid {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .status-unpaid {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+        
+        .status-overdue {
+            background: #fecaca;
+            color: #7f1d1d;
+        }
+        
+        .action-btn {
+            background: #1a472a;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .action-btn:hover {
+            background: #2d5a3d;
+        }
+        
+        .action-btn.delete {
+            background: #dc2626;
+        }
+        
+        .action-btn.delete:hover {
+            background: #b91c1c;
+        }
+        
+        .add-btn {
+            background: #f59e0b;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .add-btn:hover {
+            background: #d97706;
+        }
+        
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
+        }
+        
+        .login-box {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+        
+        .login-box h2 {
+            color: #1a472a;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .login-box .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .login-box input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        
+        .login-box button {
+            width: 100%;
+            background: #1a472a;
+            color: white;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .login-box button:hover {
+            background: #2d5a3d;
+        }
+        
+        .login-error {
+            color: #dc2626;
+            text-align: center;
+            margin-top: 1rem;
+            display: none;
+        }
+        
+        .filter-bar {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-bar select,
+        .filter-bar input {
+            padding: 0.5rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 6px;
+        }
+        
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+            
+            .phone-header {
+                display: none;
+            }
+            
+            .modal-content {
+                margin: 1rem;
+                padding: 2rem 1.5rem;
+            }
+            
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .data-table {
+                font-size: 0.85rem;
+            }
+            
+            .admin-nav {
+                overflow-x: auto;
+            }
+            
+            .service-grid,
+            .testimonial-grid,
+            .team {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        EMERGENCY ROOF REPAIR? Call us 24/7: <a href="tel:5551234567">(555) 123-4567</a>
+    </div>
+    
+    <!-- Main Website -->
+    <div id="mainWebsite">
+        <header>
+            <nav>
+                <div class="logo" onclick="scrollToSection('home')">
+                    S&I Roofing Pro
+                </div>
+                <ul>
+                    <li><a onclick="scrollToSection('home')">Home</a></li>
+                    <li><a onclick="scrollToSection('services')">Services</a></li>
+                    <li><a onclick="scrollToSection('about')">About</a></li>
+                    <li><a onclick="scrollToSection('contact')">Contact</a></li>
+                    <li class="phone-header">(555) 123-4567</li>
+                    <li><a class="admin-btn" onclick="showLogin()">Admin</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section id="home" class="hero">
+            <h1>Expert Roofing Services You Can Trust</h1>
+            <p>Quality roofing with smart business - Eddie Stevens & Dylan Ireland</p>
+            
+            <div class="hero-badges">
+                <div class="badge">Licensed & Insured</div>
+                <div class="badge">Free Estimates</div>
+                <div class="badge">Emergency Service</div>
+                <div class="badge">Warranty Included</div>
+            </div>
+            
+            <div>
+                <button class="cta-button" onclick="scrollToSection('contact')">Get Free Quote</button>
+                <button class="cta-button secondary" onclick="window.location.href='tel:5551234567'">Call Now</button>
+            </div>
+        </section>
+        
+        <!-- Trust Section -->
+        <section class="trust-section">
+            <h2 style="color: #1a472a; font-size: 2rem; margin-bottom: 1rem;">Why Choose Stevens & Ireland?</h2>
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <h3>5-Star Rated</h3>
+                    <p>Highly rated by customers</p>
+                </div>
+                <div class="trust-item">
+                    <h3>Fair Pricing</h3>
+                    <p>No hidden fees ever</p>
+                </div>
+                <div class="trust-item">
+                    <h3>Fully Insured</h3>
+                    <p>Licensed & bonded</p>
+                </div>
+                <div class="trust-item">
+                    <h3>Fast Response</h3>
+                    <p>Same-day service available</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Our Roofing Services</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <h3>Roof Installation</h3>
+                        <p>Complete roof installation for residential and commercial properties using quality materials and expert techniques. We handle everything from material selection to final inspection.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Roof Repair</h3>
+                        <p>Fast and reliable roof repairs to fix leaks, damaged shingles, and storm damage. Emergency services available 24/7 to protect your home when you need it most.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Roof Inspection</h3>
+                        <p>Thorough roof inspections to identify potential problems before they become major issues. Perfect for home buyers, sellers, or routine maintenance checks.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Storm Damage</h3>
+                        <p>Expert storm damage assessment and repair. We work directly with insurance companies to make the claims process smooth and stress-free for you.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Roof Replacement</h3>
+                        <p>Full roof replacement services with a variety of materials including asphalt shingles, metal, and tile roofing. We'll help you choose the best option for your home and budget.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Gutter Services</h3>
+                        <p>Gutter installation, repair, and cleaning to protect your roof and foundation from water damage. Properly functioning gutters are essential for roof longevity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">5 Stars</div>
+                    <p class="testimonial-text">"Eddie and Dylan did an amazing job on our roof replacement. Professional, affordable, and finished ahead of schedule. Highly recommend!"</p>
+                    <div class="testimonial-author">- Sarah M., Homeowner</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">5 Stars</div>
+                    <p class="testimonial-text">"Had a leak during a storm and they came out the same day. Fixed it quickly and the price was very fair. These guys are the real deal."</p>
+                    <div class="testimonial-author">- Mike T., Residential</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">5 Stars</div>
+                    <p class="testimonial-text">"Great communication throughout the entire process. Dylan kept me updated on costs and Eddie's crew was respectful and clean. Will use again!"</p>
+                    <div class="testimonial-author">- Jennifer K., Homeowner</div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Meet The Team</h2>
+                <p style="text-align: center; font-size: 1.1rem; max-width: 800px; margin: 0 auto 2rem;">
+                    S&I Roofing Pro is built on a foundation of friendship, trust, and exceptional craftsmanship. 
+                    Dylan runs the business operations, finances, and strategy while Eddie brings the roofing expertise and manages field operations.
+                </p>
+                
+                <div class="team">
+                    <div class="team-member">
+                        <h3>Dylan Ireland</h3>
+                        <p style="color: #f59e0b; font-weight: bold; margin-bottom: 1rem;">Co-Founder & CEO</p>
+                        <p>Runs all business operations including finances, strategy, client relations, and growth. Dylan handles the business side ensuring profitability and smooth operations from quote to payment.</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <h3>Eddie Stevens</h3>
+                        <p style="color: #f59e0b; font-weight: bold; margin-bottom: 1rem;">Co-Founder & Operations Manager</p>
+                        <p>Expert roofer overseeing all field operations and crew management. Eddie brings years of hands-on roofing experience and ensures every job meets our quality standards.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Warranty Section -->
+        <section class="warranty-section">
+            <div class="warranty-content">
+                <h2>Our Warranty Promise</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">We stand behind our work with comprehensive warranties on all installations and repairs.</p>
+                <ul style="text-align: left; max-width: 600px; margin: 0 auto; font-size: 1.1rem;">
+                    <li style="margin-bottom: 0.75rem;">Workmanship warranty on all labor</li>
+                    <li style="margin-bottom: 0.75rem;">Manufacturer warranties on materials</li>
+                    <li style="margin-bottom: 0.75rem;">Free follow-up inspections</li>
+                    <li style="margin-bottom: 0.75rem;">Written warranty documentation</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Get Your Free Estimate Today</h2>
+                <p style="font-size: 1.2rem;">Ready to start your roofing project? Contact us for a free, no-obligation estimate!</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        Call Us<br><strong style="font-size: 1.3rem;">(555) 123-4567</strong>
+                    </div>
+                    <div class="contact-item">
+                        Email Us<br><strong>info@sirooofingpro.com</strong>
+                    </div>
+                    <div class="contact-item">
+                        Hours<br><strong>Mon-Sat: 7AM-6PM</strong>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="quoteForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                            <div class="error-message" id="nameError">Please enter your name</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error-message" id="emailError">Please enter a valid email</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                            <div class="error-message" id="phoneError">Please enter your phone number</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Property Address</label>
+                            <input type="text" id="address" name="address" placeholder="Street address for estimate">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Needed *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service...</option>
+                                <option value="roof-installation">Roof Installation</option>
+                                <option value="roof-repair">Roof Repair</option>
+                                <option value="roof-inspection">Roof Inspection</option>
+                                <option value="roof-replacement">Roof Replacement</option>
+                                <option value="storm-damage">Storm Damage Repair</option>
+                                <option value="gutter-services">Gutter Services</option>
+                                <option value="emergency">Emergency Service</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your roofing needs..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <label for="terms">I agree to the <a href="#" onclick="openModal('terms'); return false;">Terms and Conditions</a> and <a href="#" onclick="openModal('privacy'); return false;">Privacy Policy</a> *</label>
+                            </div>
+                            <div class="error-message" id="termsError">You must agree to the terms</div>
+                        </div>
+                        
+                        <button type="submit" class="cta-button" style="width: 100%;">Submit Quote Request</button>
+                        
+                        <div class="success-message" id="successMessage">
+                            Thank you! We'll get back to you within 24 hours.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>&copy; 2026 S&I Roofing Pro. All rights reserved.</p>
+            <p style="margin: 1rem 0;">Licensed • Insured • Trusted</p>
+            <p style="margin-top: 1rem;">
+                <a href="#" onclick="openModal('terms'); return false;">Terms & Conditions</a>
+                <a href="#" onclick="openModal('privacy'); return false;">Privacy Policy</a>
+            </p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">Serving the local community with pride</p>
+        </footer>
+    </div>
